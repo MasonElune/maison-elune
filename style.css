@@ -1,0 +1,127 @@
+/* Paleta de cores Maison Elune */
+:root {
+  --nude-claro: #E2DAD0;
+  --preto-suave: #262626;
+  --bege-rosado: #EDE9E3;
+  --verde-petroleo: #0F1C1B;
+  --verde-oliva: #2C3424;
+  --rosa-antigo: #AE6F7D;
+  --cinza-nude: #CDC6C3;
+  --dourado-queimado: #B38E58;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--verde-petroleo);
+  color: var(--bege-rosado);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--dourado-queimado);
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--dourado-queimado);
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  background-color: var(--dourado-queimado);
+  color: var(--verde-petroleo);
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--rosa-antigo);
+  color: var(--bege-rosado);
+}
+
+.btn-secondary {
+  background-color: var(--rosa-antigo);
+  color: var(--verde-petroleo);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+label {
+  font-weight: 600;
+  color: var(--cinza-nude);
+}
+
+input {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--cinza-nude);
+  font-size: 1rem;
+  background-color: var(--bege-rosado);
+  color: var(--verde-petroleo);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--dourado-queimado);
+}
+
+p {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--cinza-nude);
+}
+
+a {
+  color: var(--dourado-queimado);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
