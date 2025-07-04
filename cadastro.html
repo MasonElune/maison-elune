@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro - Maison Elune</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h2>Cadastro</h2>
+  </header>
+
+  <main>
+    <form id="cadastro-form">
+      <label for="nome">Nome completo</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="tipoUsuario">Tipo de usuário</label>
+      <select id="tipoUsuario" name="tipoUsuario" required>
+        <option value="">Selecione</option>
+        <option value="paciente">Paciente</option>
+        <option value="profissional">Profissional da Saúde Esteta</option>
+      </select>
+
+      <div id="profissionalCampos" style="display:none;">
+        <label for="especialidade">Especialidade</label>
+        <select id="especialidade" name="especialidade">
+          <option value="">Selecione</option>
+          <option value="biomedico">Biomédico</option>
+          <option value="cirurgiaoPlastico">Cirurgião Plástico</option>
+          <option value="cirurgiaoGeral">Cirurgião Geral</option>
+          <option value="clinicoGeral">Clínico Geral</option>
+          <option value="dermatologista">Dermatologista</option>
+          <option value="enfermeiroEsteta">Enfermeiro Esteta</option>
+          <option value="farmaceuticoEsteta">Farmacêutico Esteta</option>
+          <option value="medico">Médico</option>
+          <option value="odontologo">Odontólogo</option>
+        </select>
+
+        <label for="conselho">Número do Conselho</label>
+        <input type="text" id="conselho" name="conselho" />
+      </div>
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" required />
+
+      <button type="submit" class="btn">Cadastrar</button>
+    </form>
+
+    <p>Já tem conta? <a href="login.html">Faça login</a></p>
+  </main>
+
+  <script>
+    const tipoUsuario = document.getElementById('tipoUsuario');
+    const profissionalCampos = document.getElementById('profissionalCampos');
+
+    tipoUsuario.addEventListener('change', () => {
+      if(tipoUsuario.value === 'profissional') {
+        profissionalCampos.style.display = 'block';
+      } else {
+        profissionalCampos.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
