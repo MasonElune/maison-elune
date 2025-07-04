@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Análise Inteligente - Maison Elune</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header>
+    <h2>Análise Inteligente</h2>
+  </header>
+
+  <main>
+    <form id="upload-form">
+      <label for="fotoFrontal">Foto Frontal</label>
+      <input type="file" id="fotoFrontal" accept="image/*" required />
+
+      <label for="fotoPerfil">Foto de Perfil</label>
+      <input type="file" id="fotoPerfil" accept="image/*" required />
+
+      <label for="fotoTresQuartos">Foto 3/4</label>
+      <input type="file" id="fotoTresQuartos" accept="image/*" required />
+
+      <button type="submit" class="btn">Enviar para Análise</button>
+    </form>
+
+    <section id="resultado" style="display:none; margin-top:2rem;">
+      <h3>Resultado da Análise</h3>
+      <p>Aguardando envio das fotos...</p>
+      <div id="imagensPreview" style="display:flex; gap:1rem; margin-top:1rem;"></div>
+      <div id="sugestoes" style="margin-top:1rem;"></div>
+    </section>
+
+    <nav>
+      <a href="dashboard-paciente.html" class="btn btn-secondary">Voltar ao Dashboard</a>
+    </nav>
+  </main>
+</body>
+</html>
